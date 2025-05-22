@@ -1,0 +1,67 @@
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@theme {
+	--color-c-black: #313131;
+	--color-c-base: #2E273F;
+	--color-c-dark:#280066;
+	--color-c-logo-blue:#6300FF;
+	--color-c-yellow:#FDEBC4;
+	--color-c-logo-yellow:#FFF200;
+	--color-c-logo-purple:#CC05B5;
+	--font-c-baloo:"Baloo Bhai 2";
+}
+
+@layer base {
+	:root {
+		--radius: 0.5rem;
+		--sidebar-background: 0 0% 98%;
+		--sidebar-foreground: 240 5.3% 26.1%;
+		--sidebar-primary: 240 5.9% 10%;
+		--sidebar-primary-foreground: 0 0% 98%;
+		--sidebar-accent: 240 4.8% 95.9%;
+		--sidebar-accent-foreground: 240 5.9% 10%;
+		--sidebar-border: 220 13% 91%;
+		--sidebar-ring: 217.2 91.2% 59.8%;
+	}
+	.dark {
+		--sidebar-background: 240 5.9% 10%;
+		--sidebar-foreground: 240 4.8% 95.9%;
+		--sidebar-primary: 224.3 76.3% 48%;
+		--sidebar-primary-foreground: 0 0% 100%;
+		--sidebar-accent: 240 3.7% 15.9%;
+		--sidebar-accent-foreground: 240 4.8% 95.9%;
+		--sidebar-border: 240 3.7% 15.9%;
+		--sidebar-ring: 217.2 91.2% 59.8%;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Nunito", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: normal;
+	font-style: normal;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	@apply w-full max-w-[1256px] lg:px-2 px-1 mx-auto;
+}
+
+.wrapper-full {
+	@apply lg:px-12 px-2 mx-auto overflow-x-hidden;
+}
+
+.custom-before-bg::before {
+  background-image: url('/images/cloudeshape.svg');
+}
+
+.responsive {
+	@apply lg:flex-row flex-col;
+}
